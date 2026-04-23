@@ -1,0 +1,132 @@
+# README Standard — Imagine Apps
+
+Genera READMEs consistentes, útiles y accionables para cualquier proyecto de Imagine Apps.
+
+---
+
+## Estructura obligatoria
+
+Todo README debe seguir exactamente este orden y contener estas secciones:
+
+```markdown
+# [Nombre del Proyecto o Herramienta]
+
+> Una línea que describe qué es y para qué sirve. Sin jerga. Sin rodeos.
+
+---
+
+## ¿Qué es esto?
+
+Párrafo breve (2–4 líneas) explicando el propósito del proyecto: qué problema resuelve, quién lo usa, y en qué contexto vive dentro de Imagine Apps.
+
+---
+
+## ¿Para quién es?
+
+- **Equipo interno**: quién lo opera día a día
+- **Stakeholders**: quién toma decisiones sobre él
+- **Nuevos miembros**: qué necesitan saber para arrancar
+
+---
+
+## Estructura del repositorio
+
+```
+nombre-proyecto/
+├── src/           → Código fuente principal
+├── docs/          → Documentación técnica y funcional
+├── assets/        → Imágenes, íconos, recursos estáticos
+└── README.md      → Este archivo
+```
+
+---
+
+## Cómo empezar
+
+### Prerequisitos
+- Node 18+ / Python 3.10+ / [lo que aplique]
+- Acceso a [Notion / Supabase / Agent Hub / etc.]
+
+### Instalación
+```bash
+git clone https://github.com/imagine-apps/nombre-proyecto
+cd nombre-proyecto
+npm install
+```
+
+### Configuración
+Copia el archivo de variables de entorno y complétalo:
+```bash
+cp .env.example .env
+```
+
+---
+
+## Uso principal
+
+Describe el flujo más común con un ejemplo concreto. Si hay comandos, ponlos. Si hay una interfaz, describe los pasos clave.
+
+---
+
+## Documentación relacionada
+
+| Recurso | Enlace |
+|---|---|
+| Notion del proyecto | [link] |
+| Handbook operativo | [link] |
+| Diseño en Figma | [link] |
+| Tablero de tareas | [link] |
+
+---
+
+## Estado del proyecto
+
+| Item | Estado |
+|---|---|
+| Versión actual | `v1.0.0` |
+| Ambiente | `producción / staging / desarrollo` |
+| Última actualización | AAAA-MM-DD |
+| Responsable | Nombre + contacto |
+
+---
+
+## Contribuir
+
+Instrucciones breves para hacer cambios: convención de ramas, cómo hacer un PR, quién aprueba.
+
+---
+
+## Licencia / Uso interno
+
+> Este proyecto es propiedad de Imagine Apps y fue desarrollado por [nombre del usuario]. Uso interno únicamente.
+```
+
+---
+
+## Reglas de aplicación
+
+**Siempre presentes (no omitir bajo ninguna circunstancia):**
+- Título + descripción en una línea
+- ¿Qué es esto?
+- Estructura del repositorio
+- Cómo empezar
+- Estado del proyecto
+
+**Incluir cuando aplique:**
+- ¿Para quién es? → si el proyecto tiene múltiples audiencias
+- Uso principal → si el uso no es obvio desde el título
+- Documentación relacionada → si existe Notion, Figma, o Handbook
+- Contribuir → si hay más de una persona tocando el repo
+
+**Tono:** directo, sin adornos. Un nuevo miembro o cliente debe poder leerlo en 3 minutos y saber exactamente qué hacer.
+
+**Idioma:** Generar el archivo en ambos idiomas; primero en inglés luego en español. 
+---
+
+## Proceso de generación
+
+1. Leer el contexto del proyecto (nombre, stack, propósito, audiencia)
+2. Si hay un README existente, preservar información válida y completar lo que falta
+3. Si el README está vacío, generar la estructura completa con placeholders claros (`[link]`, `[lo que aplique]`)
+4. Si hay información obligatoria faltante, solicitar al usuario un input adicional. No improvisar ni asumir. 
+5. Nunca entregar un README sin las 5 secciones obligatorias completas
