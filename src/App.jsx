@@ -2,11 +2,6 @@ import { useState } from 'react'
 import Chat from './components/Chat'
 import FAQ  from './components/FAQ'
 
-const TABS = [
-  { id: 'chat', label: '💬 Asistente de Esterilizaciones' },
-  { id: 'faq',  label: '📋 Preguntas Frecuentes' },
-]
-
 export default function App() {
   const [tab, setTab] = useState('chat')
 
@@ -15,25 +10,28 @@ export default function App() {
       <header className="header">
         <div className="header-avatar">🐾</div>
         <div className="header-info">
-          <h1 className="header-name">IDPYBA — Asistente Virtual</h1>
-          <p className="header-sub">Instituto Distrital de Protección y Bienestar Animal · Bogotá</p>
+          <div className="header-name">Aguapanela</div>
+          <div className="header-sub">te ayudo a agendar y cuidar tu mascota</div>
         </div>
         <div className="header-status">
-          <span className="status-dot"></span>
+          <span className="status-dot" />
           En línea
         </div>
       </header>
 
       <nav className="tabs">
-        {TABS.map(t => (
-          <button
-            key={t.id}
-            className={`tab ${tab === t.id ? 'active' : ''}`}
-            onClick={() => setTab(t.id)}
-          >
-            {t.label}
-          </button>
-        ))}
+        <button
+          className={`tab ${tab === 'chat' ? 'active' : ''}`}
+          onClick={() => setTab('chat')}
+        >
+          💬 Asistente
+        </button>
+        <button
+          className={`tab ${tab === 'faq' ? 'active' : ''}`}
+          onClick={() => setTab('faq')}
+        >
+          📋 Preguntas frecuentes
+        </button>
       </nav>
 
       <main className="content">
